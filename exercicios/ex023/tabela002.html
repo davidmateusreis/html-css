@@ -13,6 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -27,6 +28,7 @@
             padding: 10px;
             background-color: lightgray;
         }
+        
         td.numero {
             text-align: right;
         }
@@ -36,7 +38,13 @@
             color: white;
         }
         
-        tbody > tr;:nth-child(odd) { /* 2n-1 */
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(odd) { /* 2n-1 */
             background-color: white;
         }
 
@@ -181,6 +189,6 @@
                 <td class="numero"><strong>210 147 125</strong></td>
             </tr>
         </tfoot>
-    </table>    
+    </table>       
 </body>
 </html>
